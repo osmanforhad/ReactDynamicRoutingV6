@@ -7,7 +7,6 @@ import NavLayouts from './components/layout/NavLayouts';
 import Nomatch from './components/errors/404Nomatch';
 import router from './components/routes/router';
 const App = () => {
-  
   <router />
 
   return (

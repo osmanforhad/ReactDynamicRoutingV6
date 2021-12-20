@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SuperAdmin() {
+const SuperAdmin = () => {
     return (
         <div>
             <h4 className="text-center">This is Super Admin Page</h4>
@@ -8,4 +8,4 @@ function SuperAdmin() {
     )
 }
 
-export default SuperAdmin
+export default SuperAdmin;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Users = ({ router }) => {
+const Users = ({router}) => {
     return (
       <>
       <h4 className="text-center">This is Users Page</h4>
@@ -16,6 +16,7 @@ const Users = ({ router }) => {
             </li>
           ))}
         </ul>
+        
       </>
     );
   };
