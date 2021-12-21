@@ -1,22 +1,15 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import User from './User';
 
-const Users = ({ router }) => {
+const Users = () => {
   
   return (
     <>
-      <h2>Users List:</h2>
-
-      <ul>
-        {router.map((route) => (
-          <li key={route.path}>
-            <Link to={route.name}>
-              {route.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <Outlet />
+    <h4 className="text-center">This is User Page</h4>
+      <Routes>
+      <Route path=":params" element={ <User />} />
+      </Routes>
     </>
   );
 };

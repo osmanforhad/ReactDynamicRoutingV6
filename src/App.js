@@ -5,11 +5,9 @@ import Home from './components/pages/Home';
 import Users from './components/pages/Users';
 import NavLayouts from './components/layout/NavLayouts';
 import Nomatch from './components/errors/404Nomatch';
-import User from './components/pages/User';
-import router from './components/routes/router';
 const App = () => {
 
-  <router/>
+  // <router/>
 
   return (
    <Router>
@@ -17,8 +15,7 @@ const App = () => {
       <Route element={<NavLayouts />}>
         <Route index element={<Home />} />
         <Route path="home" element={<Home />} />
-        <Route path="users" element={<Users router={router} />}>
-          <Route path=":params" element={ <User />} />
+        <Route path="users/*" element={<Users />}>
         </Route>
         <Route path="*" element={<Nomatch />} />
       </Route>
