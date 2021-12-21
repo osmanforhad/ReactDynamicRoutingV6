@@ -1,24 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
-const Users = ({router}) => {
-    return (
-      <>
-      <h4 className="text-center">This is Users Page</h4>
-        <h2>List of Users</h2>
+const Users = ({ router }) => {
   
-        <ul>
-          {router.map((route, index) => (
-            <li key={index}>
-              <Link to={`dashboard/${route.path}`}>
-                {route.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-        
-      </>
-    );
-  };
+  return (
+    <>
+      <h2>Users List:</h2>
+
+      <ul>
+        {router.map((route) => (
+          <li key={route.path}>
+            <Link to={route.name}>
+              {route.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <Outlet />
+    </>
+  );
+};
 
 export default Users;
