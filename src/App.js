@@ -7,8 +7,6 @@ import NavLayouts from './components/layout/NavLayouts';
 import Nomatch from './components/errors/404Nomatch';
 const App = () => {
 
-  // <router/>
-
   return (
    <Router>
       <Routes>
